@@ -1,17 +1,37 @@
 # encode
 golang加密库
 
-## Json
+## ByJson
 json加密
 
-## Base64
+## ByBase64
 base64加密
 
-## Md5
+## ByMd5
 md5加密
 
-## Des
+## ByAes
+AES加密
+
+## ByDes
 DES加密
 
-## Rsa
+## By3Des
+3DES加密
+
+## ByRsa
 RSA加密
+
+## ByCbc
+CBC加密
+
+## ByEcb
+ECB加密
+
+## BySha
+SHA加密
+
+## ByJwt
+JWT加密
+
+
