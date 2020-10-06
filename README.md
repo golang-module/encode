@@ -28,8 +28,20 @@ CBC加密
 ## ByEcb
 ECB加密
 
-## BySha
-SHA加密
+## BySha1
+SHA1加密
+
+## BySha224
+SHA224加密
+
+## BySha256
+SHA256加密
+
+## BySha384
+SHA384加密
+
+## BySha512
+SHA512加密
 
 ## ByJwt
 JWT加密
