@@ -21,7 +21,7 @@ func FromFile(f string) file {
 	return file{path: f}
 }
 
-// Todo ByMd5 对字符串进行md5加密
+// ByMd5 对字符串进行md5加密
 func (s str) ByMd5() string {
 	bt := md5.Sum([]byte(s.name))
 	return fmt.Sprintf("%x", bt) //将[]byte转成16进制
