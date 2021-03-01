@@ -1,22 +1,15 @@
-package encode
+package encrypt
 
-import "encoding/base64"
+import (
+	"encoding/base64"
+)
 
-// waitingForEncodeUrl 待编码URL
-type waitingForEncodeUrl struct {
-	url string
-}
-
-func FromUrl(s string) *waitingForEncodeUrl {
-	return &waitingForEncodeUrl{url: s}
-}
-
-// ByBase64 对URL进行base64编码
-func (s *waitingForEncodeUrl) ByBase64() string {
-	return base64.URLEncoding.EncodeToString([]byte(s.url))
-}
-
-// ByBase64 对字符串进行base64编码
-func (s *waitingForEncodeString) ByBase64() string {
-	return base64.StdEncoding.EncodeToString([]byte(s.value))
+// ByBase64 通过base64编码
+func (e Encrypt) ByBase64() Encrypt {
+	src := e.src
+	if e.dst != nil {
+		src = e.dst
+	}
+	e.dst = []byte(base64.StdEncoding.EncodeToString(src))
+	return e
 }

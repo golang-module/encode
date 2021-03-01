@@ -1,15 +1,27 @@
-# encode
+# encrypt
 golang加密库
 
 ## ByJson
 json加密
 
-## ByBase64
-base64加密
+## base64加密
+```go
+// 字符串加密
+encrypt.FromString("12345678").ByBase64().ToByte()  //  [77 84 73 122 78 68 85 50 78 122 103 61]
+encrypt.FromString("12345678").ByBase64().ToString()  // MTIzNDU2Nzg=
+encrypt.FromString("12345678").ToBase64String() // MTIzNDU2Nzg=
+```
 
-## ByMd5
-md5加密
+## md5加密
+```go
+// 字符串加密
+encrypt.FromString("123456").ByMd5().ToByte() 
+encrypt.FromString("123456").ByMd5().ToString() 
 
+// 文件加密
+encrypt.FromFile("./demo.pdf").ByMd5().ToByte() 
+encrypt.FromFile("./demo.pdf").ByMd5().ToString() 
+```
 ## ByAes
 AES加密
 
@@ -21,12 +33,6 @@ DES加密
 
 ## ByRsa
 RSA加密
-
-## ByCbc
-CBC加密
-
-## ByEcb
-ECB加密
 
 ## BySha1
 SHA1加密
@@ -42,8 +48,3 @@ SHA384加密
 
 ## BySha512
 SHA512加密
-
-## ByJwt
-JWT加密
-
-
